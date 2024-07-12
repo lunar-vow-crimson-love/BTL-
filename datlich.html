@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    
+    .container {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 600px;
+        overflow: hidden;
+    }
+    
+    .header {
+        background-color: #007bff;
+        padding: 20px;
+        color: #fff;
+        text-align: center;
+    }
+    
+    .header h1 {
+        margin: 0;
+    }
+    
+    .header p {
+        margin: 5px 0 0 0;
+        color: #ccc;
+    }
+    
+    form {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .form-group {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        justify-content: center;
+    }
+    
+    .form-group label {
+        flex: 1;
+        margin-right: 10px;
+    }
+    
+    .input-container {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .required {
+        color: red;
+        margin-left: 5px;
+    }
+    
+    input[type="text"],
+    input[type="date"],
+    input[type="tel"] {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    
+    .radio-group1 {
+        margin-top: 5px;
+        width: 370px;
+    }
+    
+    .radio-group {
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+        width: 370px;
+    }
+    
+    .radio-group label {
+        margin-left: 5px;
+        margin-right: 10px;
+    }
+    
+    .radio-group input[type="radio"] {
+        margin-right: 5px;
+    }
+    
+    button {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100px;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+    
+    .button-container {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Đặt lịch khám bệnh</h1>
+        </div>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Họ và tên <span class="required">*</span></label>
+                <div class="input-container">
+                    <input type="text" id="name" name="name" required>
+                    <small class="instruction">Chỉ sử dụng chữ cái (a-z), số, @, . và dấu chấm, độ dài tối thiểu 3 ký tự</small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Giới tính <span class="required">*</span></label>
+                <div class="radio-group1">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Nam</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Nữ</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Bạn muốn khám <span class="required">*</span></label>
+                <div class="radio-group">
+                    <label for="">Niềng răng</label>
+                    <input type="radio" id="niengrang" value="niengrang">
+                    <label for="">Cạo vôi răng</label>
+                    <input type="radio" id="caovoirang" value="caovoirang">
+                    <label for="">Bọc răng sứ</label>
+                    <input type="radio" id="rangsu" value="rangsu">
+                    <label for="">Tẩy trắng răng</label>
+                    <input type="radio" id="taytrangrang" value="taytrangrang">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Số điện thoại <span class="required">*</span></label>
+                <div class="input-container">
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+            </div>
+
+            <div class="button-container">
+                <button type="button" onclick="add()">Đặt lịch hẹn</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        var data = []
+
+        function add() {
+            var item_name = document.getElementById("name").value
+            var item_male = document.getElementById("male").value
+            var item_female = document.getElementById("female").value
+            var item_niengrang = document.getElementById("niengrang").value
+            var item_caovoirang = document.getElementById("caovoirang").value
+            var item_rangsu = document.getElementById("rangsu").value
+            var item_taytrangrang = document.getElementById("taytrangrang").value
+            var item_phone = document.getElementById("phone").value
+
+            var item = {
+                Name: item_name,
+                Male: item_male,
+                Female: item_female,
+                Niengrang: item_niengrang,
+                Caovoirang: item_caovoirang,
+                Rangsu: item_rangsu,
+                Taytrangrang: item_taytrangrang,
+                Phone: item_phone
+            }
+            data.push(item)
+            console.log(data)
+            alert("Đặt lịch thành công")
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: rgba(0, 157, 255, 0.963);
+}
+
+body {
+    background-color: #9e99994b;
+    background-image: url(./Ânh/website-background-templates.jpg);
+    background-size: cover;
+}
+
+.logo {
+    font-family: cursive;
+    font-size: 30px;
+}
+
+header nav ul li {
+    list-style: none;
+    float: right;
+    padding: 10px 30px;
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+header nav ul li:hover {
+    color: red;
+    border-bottom: 2px solid greenyellow;
+}
+
+.btn1 {
+    background-color: rgba(0, 157, 255, 0.963);
+    border: none;
+    color: black;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.btn1:hover {
+    color: red;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: red;
+}
+
+.btn {
+    border: 0;
+    padding: 10px 30px;
+    border-radius: 30px;
+    background-color: rgb(210, 50, 50);
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #33333352;
+}
+
+.anhtroi {
+    margin: 100px auto;
+    width: 75%;
+}
+
+.anha {
+    max-width: 650px;
+    float: left;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    margin-right: 50px;
+}
+
+.anhtroi h2 {
+    font-size: 50px;
+    color: rgba(0, 0, 0, 0.509);
+}
+
+.head1 {
+    margin-top: 10%;
+    color: rgb(86, 51, 108);
+    font-size: 40px
+}
+
+.dich_vu {
+    border-radius: 20px;
+}
+
+.img_dich_vu {
+    max-width: 35px;
+}
+
+.img_thamkham {
+    max-width: 500px;
+    border-radius: 20px;
+    margin-left: 30px;
+}
+
+.huong_dan_tham_kham {
+    border: 1px solid;
+    margin-top: 40px;
+    border-radius: 20px;
+    box-shadow: -9px 0px 1px 0px blue;
+}
+
+.datlich {
+    background-color: aquamarine;
+    border-radius: 20px;
+    padding: 10px 110px;
+}
+
+.datlich:hover {
+    background-color: rgba(14, 13, 13, 0.626);
+}
+
+.datlich1 {
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+}
+
+footer {
+    clear: both;
+    background-color: rgb(176, 234, 234);
+}
